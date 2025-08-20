@@ -42,7 +42,7 @@ public class ToDoController {
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(taskService.updateTask(taskID, updateTaskDTO));
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{taskID}")
     public void deleteTask(@PathVariable String taskID) {
         taskService.deleteTask(taskID);
     }
